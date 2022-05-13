@@ -24,44 +24,62 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            
-
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                   CATHERINE
+                <div class="">
+                   
+
+
+                   <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 ">
+                      <a class="navbar-brand" href="#"><h1>CATHERINE</h1></a>
+                      <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#scrollspyHeading1">First</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </nav>
+                   
+
+
                 </div>
+               
 
-                
-                @for ($i = 0; $i < (count($files)-1); $i++)
-                                {{$i}}
-                                @endfor
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                      <h4 id="scrollspyHeading1">First heading</h4>
+                      <p>
+
+
+
+
+                       <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                         
-                                        
+                        <div class="p-6 flex rounded mx-auto d-block">
                             <!-- slider   -->
                             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
-                             
                                     @for ($i = 0; $i < (count($files)); $i++)
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$i}}" class="active" aria-current="true" aria-label="Slide {{$i}}"></button>
                                     @endfor
-
-                               
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                    
-                                        <img src="\images\cristal\Isabelle1.jpg" class="" alt="">
-                                   
+                                        <img src="\images\cristal\Isabelle1.jpg" class="rounded mx-auto d-block" alt="">
                                     </div>
                                     @foreach ($files as $file)
                                     <div class="carousel-item ">
-                                    
-                                        <img src="{{asset('images/cristal/'.$file->getFilename())}}" class="" alt="">
-                                   
+                                        <img src="{{asset('images/cristal/'.$file->getFilename())}}" class="rounded mx-auto d-block" alt="">
                                     </div>
                                     @endforeach
                                 </div>
@@ -75,8 +93,6 @@
                                 </button>
                             </div>
 
-                           
-                           
                         </div>
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
@@ -119,7 +135,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
@@ -145,6 +160,23 @@
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
+
+
+
+                      </p>
+                      <h4 id="scrollspyHeading2">Second heading</h4>
+                      <p>...</p>
+                      <h4 id="scrollspyHeading3">Third heading</h4>
+                      <p>...</p>
+                      <h4 id="scrollspyHeading4">Fourth heading</h4>
+                      <p>...</p>
+                      <h4 id="scrollspyHeading5">Fifth heading</h4>
+                      <p>...</p>
+                </div>
+
+
+
+                
             </div>
         </div>
 
