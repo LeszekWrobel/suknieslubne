@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\public",
+    "\\public\\images",
+    "\\public\\images\\cristal",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\inc",
+    "\\routes"
+  ],
+  "SelectedNode": "\\resources\\views\\inc\\footer.php",
+  "PreviewInSolutionExplorer": true
+}
